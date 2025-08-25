@@ -2,17 +2,17 @@
 * {
   margin: 0
 }
-html, body{
+html,body{
   height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: oswald;
+  font-family: "Oswald", sans-serif;
 }
 
-main {
+main{
   flex: 1;
 }
 
@@ -25,18 +25,18 @@ p{
   line-height: 2;
 }
 
-image{
+img{
   max-width: 100%;
 }
 
-.container {
+.container{
   width:80%;
   margin: 0 auto;
 }
 
 /*header*/
 
-header {
+.site-init {
   background-image: url(./images/header.jpg);
   height: 300px;
   background-size: cover;
@@ -44,7 +44,7 @@ header {
   text-align: center;
 }
 
-.navigation-bar {
+.navigation-bar{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -52,16 +52,16 @@ header {
   align-items: center;
 }
 
-.menu a {
+.menu a{
   margin-right: 20px;
 }
-.menu a:last-of-type {
+.menu a:last-of-type{
   margin-right: 0;
 }
 
 /*about*/
 
-.flex-about {
+.flex-about{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -69,120 +69,162 @@ header {
 
 /*houses*/
 
-.house-item {
+.houses-container{
+  display: flex;
+}
+.house-item{
   background-color: #dedede;
   margin-bottom: 20px;
   border: 1px solid gray;
+  margin-right: 20px;
 }
 
-.btn-details {
+.btn-details{
   display: block;
   background-color: rgb(211, 139, 5);
-  text-align: left;
+  text-align: center;
   padding: 10px;
   margin: 10px;
 }
 
-.house-item-text {
+.house-item-text{
   padding: 20px;
 }
 
-.items-container {
+.items-container{
   display: flex;
 }
-
-.item-num {
+.item-num{
   display: flex;
+  justify-content: space-around;
+  width: 30%;
 }
 
-/*contact*/
-.contact-header {
+/*contact*/ 
+
+.contact-header{
   background-color: orange;
   height: 200px;
 }
-
-.contact-header a {
-  color: black;
+.contact-header a{
+  color:black;
 }
 
-.contact-text {
-  text-align: left;
+.contact-text{
+  text-align: center;
 }
-
-.instructions {
+.instructions{
   font-weight: 700;
 }
-
-.instructions-details {
+.instructions-details{
   font-weight: 300;
 }
 
-.form {
+.form{
   background-color: #dedede;
   padding: 20px;
   border-radius: 10px;
 }
-
-fieldset {
+fieldset{
   border:1px solid gray;
   border-radius: 10px;
 }
-
-legend {
+legend{
   text-transform: uppercase;
   letter-spacing: 3px;
   font-size: 10px;
 }
-.input-control {
+.input-control{
   display: flex;
   flex-direction: row;
   margin-bottom: 20px;
 }
+.input-control label{
+  width: 20%;
+}
 .input-control input,
-.input-control textarea {
+.input-control textarea,
+.input-control select{
   width: 80%;
   padding: 5px;
-  border: none;
+  border:none;
   border-radius: 5px;
 }
 
-footer {
+footer{
   background-color: #dedede;
   height: 150px;
-}
 
-.footer-text {
+}
+.footer-text{
   display: flex;
   height: 120px;
   justify-content: space-between;
   align-items: center;
 }
-
-.text-bold {
+.text-bold{
   font-weight: 700;
   text-decoration: underline;
 }
-
-.policy-info {
+.policy-info{
   display: flex;
 }
-
-.cr-text {
+.cr-text{
   border-right: 2px solid black;
   padding-right: 10px;
   margin-right: 10px;
 }
-
-.sm-container {
+.sm-container{
   display: flex;
 }
-
-.sm-icon {
+.sm-icon{
   display: flex;
   justify-content: center;
   border: 1px solid black;
   width: 20px;
   border-radius: 50%;
   padding: 5px;
-  margin-right: 10px;
+  margin-right:10px ;
+}
+
+.form-group{
+  margin-bottom: 15px;
+}
+
+input[type="date"],
+input[type="time"]{
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Tablet View*/
+@media (min-width: 601px) and (max-width:768px){
+
+  /*About Section*/
+.flex-about{
+  display: flex;
+  flex-direction: column; /*stack vertically*/
+  text-align: justify; /*justify text*/
+  align-items: center; /*center each div*/
+  }
+
+.flex-about div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.flex-about img{
+  width: 20%;
+  height: auto;
+  }
+
+ /*Houses Section*/
+
+ .houses-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
 }
